@@ -1,0 +1,75 @@
+<!--
+  Copyright 2017 Google Inc. All Rights Reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/assets/css/examples.css">
+    <title>Bose AR Demo</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 mb-4">
+          <h1>Bose AR Spatial Audio</h1>
+          <p class="lead">
+            <img src="vendor/assets/images/headphones.svg" class="icon-lg" alt="headphones">
+            Best experienced over headphones.
+          </p>
+          <p>
+            A Bose AR demonstration. Connnect you're Bose Frames or Bose AR
+            Headphones and move your head to view the scene and hear spatial
+            audio.
+          </p>
+
+          <div id="buttonContainer">
+            <button id="connectButton">Connect Bose Frames</button>
+            <button onclick="boseFrames.enableSensor('gameRotation', Number(20))">Enable</button>
+
+            <div class="input-group">
+              <span class="input-group-addon noselect">
+                <img src="vendor/assets/images/fullscreen-enter.svg" class="icon-button" id="goFullscreenIcon">
+                <img src="vendor/assets/images/fullscreen-exit.svg" class="icon-button" id="exitFullscreenIcon" hidden>
+              </span>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" id="sourceButton">Go Fullscreen</button>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-5">
+          <div style="width:100%">
+            <div id="renderer" ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./vendor/assets/js/resonance-audio.min.js"></script>
+    <script src="./vendor/assets/js/three.js"></script>
+    <script src="./vendor/assets/js/BoseFrames.js"></script>
+    <script src="./assets/js/demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
+
