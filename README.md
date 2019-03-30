@@ -1,17 +1,24 @@
 # Bose Frames AR Demo
 
-An example of using Bose AR rotation data in the browser to create spatial audio effect.
-It uses [Resonance Audio] for spatial audio, [Three.js] for visual space, Chrome Browser Bluetooth connection with Bose AR Frames to get head rotation data.
+An example of using Bose AR rotation data in a web browser to create a spatial audio 3D experience.
 
 ## Requirements
 
-### Bose AR Frames
+### Bose AR Wearable Device
 
-- The (unofficial) [Bose Web SDK] supports Bose Frames for rotation data.
+[Bose Frames] or [QC35 II] headphones.
 
-### Chrome Browser
+### Google Chrome Browser
 
 Google Chrome supports Web Bluetooth connections.
+
+## Libraries
+- [Bose Web SDK]
+- [Resonance Audio]
+- [Three.js]
+
+[Bose Frames]:https://www.bose.com/en_us/products/wearables/frames/bose-frames-alto.html
+[QC35 II]:https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_black
 
 [Resonance Audio]:https://github.com/resonance-audio/resonance-audio-web-sdk
 [Three.js]:https://threejs.org/
