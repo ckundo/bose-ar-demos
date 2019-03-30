@@ -1,7 +1,7 @@
 # Bose Frames AR Demo
 
 An example of using Bose AR rotation data in the browser to create spatial audio effect.
-It uses [Resonance Audio] for spatial audio, [Three.js] for visual space, Chrome Browser Bluetooth connection with Bose AR devices to get head rotation data.
+It uses [Resonance Audio] for spatial audio, [Three.js] for visual space, Chrome Browser Bluetooth connection with Bose AR Frames to get head rotation data.
 
 ## Requirements
 
