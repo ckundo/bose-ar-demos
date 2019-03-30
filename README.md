@@ -13,6 +13,6 @@ It uses [Resonance Audio] for spatial audio, [Three.js] for visual space, Chrome
 
 Google Chrome supports Web Bluetooth connections.
 
-[Resonance Audio]: https://github.com/resonance-audio/resonance-audio-web-sdk
-[Three.js] https://threejs.org/
-[Bose Web SDK]: https://github.com/zakaton/Bose-Frames-Web-SDK
+[Resonance Audio]:https://github.com/resonance-audio/resonance-audio-web-sdk
+[Three.js]:https://threejs.org/
+[Bose Web SDK]:https://github.com/zakaton/Bose-Frames-Web-SDK
