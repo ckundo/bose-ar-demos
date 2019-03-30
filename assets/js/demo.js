@@ -165,8 +165,41 @@ let onLoad = function() {
       }
     }
   });
+
   window.addEventListener('resize', function(event) {
     resize();
   }, false);
+
+  document.querySelector("#connectButton").onclick = () => {
+    boseFrames.connect()
+      .then(boseFrames => {
+        window.boseFrames = boseFrames;
+      })
+      .catch(console.error);
+  }
+
+  const boseFrames = new BoseFrames();
+  boseFrames.addEventListener("sensorData", sensorData => {
+    const sensorValues = sensorData.values;
+    sensorValues.forEach(sensorValue => {
+      const {sample, sensor, timestamp} = sensorValue;
+      const {value, bias, accuracy} = sample;
+
+      switch(sensorValue.sensor.name) {
+        case "gameRotation":
+          camera.setRotationFromQuaternion(value);
+
+          if (audioReady) {
+            if (Date.now() - lastMatrixUpdate > 100) {
+              audioScene.setListenerFromMatrix(camera.matrix);
+            }
+          }
+          break;
+
+        default:
+          break;
+      }
+    })
+  });
 };
 window.addEventListener('load', onLoad);
